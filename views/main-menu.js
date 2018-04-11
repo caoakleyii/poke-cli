@@ -1,6 +1,6 @@
 const View = require('./view');
 
-class Main extends View {
+class MainMenu extends View {
     
 }
 

@@ -1,6 +1,6 @@
 const EventEmitter = require('events');
-const fetch = require('node-fetch')
-const User = require('./lib/user')
+const fetch = require('node-fetch');
+const User = require('./lib/user');
 var net = require('net');
  
 var users  = [];
@@ -25,7 +25,7 @@ function newSocket(socket) {
 
 	user.writeLine('Welcome to the poke-cli server!\r\n');
     user.writeLine('Choose to login or register.');
-    user.writeLine('@Login or @Register \r\n')
+    user.writeLine('@Login or @Register \r\n');
 
 
     socket.on('data', function(data) {
