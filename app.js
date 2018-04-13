@@ -1,5 +1,3 @@
-const EventEmitter = require('events')
-const fetch = require('node-fetch')
 const User = require('./lib/user')
 const ViewService = require('./services/view-service')
 var net = require('net')
@@ -30,7 +28,8 @@ function newSocket(socket) {
 
 
     socket.on('data', function(data) {
-		ViewService.receiveData(user, data)		
+		console.log(user)
+		ViewService.processInput(user, data)		
     })
     
 	socket.on('end', function() {
